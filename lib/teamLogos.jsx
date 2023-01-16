@@ -37,7 +37,7 @@ function getLogoByAbbr(abbr) {
     return logos.map(team => {
         if (team.abbr == abbr) {
             return (
-                <img className="" src={team.url} alt="" />
+                <img key={abbr} className="" src={team.url} alt="" />
             )
         }
     })
