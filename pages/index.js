@@ -58,7 +58,7 @@ export default function Home() {
         <div className="fixed h-screen overflow-y-auto pb-20 flex flex-col space-y-2 shrink-0 w-64 p-4 mt-16 scrollbar scrollbar-thumb-[rgb(51,51,51)] scrollbar scrollbar-hide">
           {schedule.map((game, i) => {
             return (
-              <div onClick={() => setSelectedGame(i)} className={"bg-black rounded-xl flex flex-col border cursor-pointer hover:bg-[rgb(21,21,21)] border-[rgb(51,51,51)] py-3 " + (i == selectedGame ? 'bg-[rgb(21,21,21)] border-' : 'bg-black')}>
+              <div key={i} onClick={() => setSelectedGame(i)} className={"bg-black rounded-xl flex flex-col border cursor-pointer hover:bg-[rgb(21,21,21)] border-[rgb(51,51,51)] py-3 " + (i == selectedGame ? 'bg-[rgb(21,21,21)] border-' : 'bg-black')}>
                 <div className="flex">
                   <div className="flex flex-col w-1/2 items-center">
                     <div className="w-10 h-10">
